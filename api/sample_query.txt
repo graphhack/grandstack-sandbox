@@ -1,0 +1,18 @@
+# Write your query or mutation here
+{
+  usersBySubstring(substring: "Will"){
+    id
+    name
+    avgStars
+    reviews {
+      stars
+      text
+      business {
+        name
+        categories {
+          name
+        }
+      }
+    }
+  }
+}
