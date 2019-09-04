@@ -1,18 +1,42 @@
-# Write your query or mutation here
 {
-  usersBySubstring(substring: "Will"){
-    id
+  quarks {
     name
-    avgStars
-    reviews {
-      stars
-      text
-      business {
-        name
-        categories {
-          name
-        }
-      }
+    en_name
+    image_path
+    description
+    en_description
+    start {
+      formatted
+    }
+    end {
+      formatted
+    }
+    start_accuracy
+    end_accuracy
+    is_momentary
+    url
+    affiliate
+    gender
+    is_private
+    is_exclusive
+    user_id
+    last_modified_user
+    quark_type_id
+    created {
+      formatted
+    }
+    modified {
+      formatted
     }
   }
+}
+{
+  searchQuarks(keyword:"ドラゴンボール") {
+    name
+  }
+}
+
+{
+  quarksBySubstring(substring:"ドラゴンボール") {
+    name
 }
